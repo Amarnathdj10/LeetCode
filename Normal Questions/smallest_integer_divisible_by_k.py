@@ -8,3 +8,4 @@ class Solution:
             if remainder == 0:
                 return length
         return -1
+#rework

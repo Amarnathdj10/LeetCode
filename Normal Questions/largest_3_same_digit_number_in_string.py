@@ -4,3 +4,4 @@ class Solution:
         for i in num_list:
             if i in num:
                 return i
+#rework
