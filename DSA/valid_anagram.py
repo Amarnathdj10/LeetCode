@@ -2,16 +2,13 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
-        map_s = {}
-        map_t = {}
-        for i in s:
-            if i not in map_s:
-                map_s[i] = 1
-            else:
-                map_s[i] += 1
-        for i in t:
-            if i not in map_t:
-                map_t[i] = 1
-            else:
-                map_t[i] += 1
-        return map_s == map_t        
+
+        hashmap_s = {}
+        hashmap_t = {}
+
+        for c in s:
+            hashmap_s[c] = hashmap_s.get(c, 0) + 1
+        for c in t:
+            hashmap_t[c] = hashmap_t.get(c, 0) + 1
+            
+        return hashmap_s == hashmap_t
