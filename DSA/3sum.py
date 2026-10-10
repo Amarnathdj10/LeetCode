@@ -17,8 +17,6 @@ class Solution:
 
             while left < right:
 
-                total = nums[i] + nums[left] + nums[right]
-
                 if total < 0:
                     left += 1
 
@@ -26,7 +24,7 @@ class Solution:
                     right -= 1
 
                 else:
-                    res.append([nums[i], nums[left], nums[right]])
+                    res.append([nums[i], nums[left], nums[right]])a
 
                     while left < right and nums[left] == nums[left+1]:
                         left += 1
